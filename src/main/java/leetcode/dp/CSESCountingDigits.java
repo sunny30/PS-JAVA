@@ -92,11 +92,14 @@ public class CSESCountingDigits {
 
     public static void main(String[] args) {
         CSESCountingDigits digits = new CSESCountingDigits();
-        long n = 1540L ;
+        long n = 321 ;
+        long n1 = 123 ;
         System.out.println(digits.unitTest(1L, n));
         ArrayList<Long> indexList = digits.getIndexWiseInt(n) ;
+        ArrayList<Long> indexList1 = digits.getIndexWiseInt(n1) ;
         long ans = digits.solve(indexList,true,indexList.size()-1,-1,0L) ;
-        System.out.println(ans);
+        long ans1 = digits.solve(indexList1,true,indexList1.size()-1,-1,0L) ;
+        System.out.println(ans-ans1);
 
     }
 
